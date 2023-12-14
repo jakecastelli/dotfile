@@ -20,7 +20,7 @@ for item in *; do
     # Check if the item is not the script file and create a symlink
     if [ "$item" != "$script_file" ]; then
         # Create a symlink in the destination folder
-        ln -s "$PWD/$item" "$destination_folder/$item"
+        ln -sf "$PWD/$item" "$destination_folder/$item"
         echo "Symlink created for $item"
     fi
 done
