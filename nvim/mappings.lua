@@ -5,9 +5,13 @@ M.general = {
   n = {
     ["<C-d>"] = { "<C-d>zz", "Stay center when move half page up", opts = { nowait = true } },
     ["<C-u>"] = { "<C-u>zz", "Stay center when move half page down", opts = { nowait = true } },
-    ["<leader>w"] = { "<cmd> w <CR>", "Save file" },
     ["<C-p>"] = { "<cmd> Telescope find_files follow=true <CR>", "Find files" },
+
+    ["<leader>w"] = { "<cmd> w <CR>", "Save file" },
     ["<leader><leader>"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
+    ["<leader>."] = { ":vertical resize +5<CR>", "Vertical resize +5" },
+    ["<leader>,"] = { ":vertical resize -5<CR>", "Vertical resize -5" },
+
     ["<S-l>"] = {
       function()
         require("nvchad.tabufline").tabuflineNext()
